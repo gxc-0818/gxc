@@ -1,0 +1,14 @@
+1 group by
+2 reduceByKey
+3 groupByKey
+4 aggregateByKey
+5 foldByKey
+6 combineByKey
+7 countByValue
+8 countByKey-----
+
+reduceByKey: 相同key的第一个数据不进行任何计算，分区内和分区间计算规则相同
+foldByKey: 相同key的第一个数据和初始值进行分区内计算，分区内和分区间计算规则相同
+AggregateByKey：相同key的第一个数据和初始值进行分区内计算，分区内和分区间计算规则可以不相同
+CombineByKey:当计算时，发现数据结构不满足要求时，可以让第一个数据转换结构。分区内和分区间计算规则不相同。
+
